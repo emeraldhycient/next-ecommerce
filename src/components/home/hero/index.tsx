@@ -34,8 +34,9 @@ const HeroSection = () => {
                                 marginBottom: 2
                             }}
                         >
-                            {/* Text overlay for second image */}
-                        </Box>
+                            <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
+                            <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
+                            <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>                        </Box>
                         <Grid container spacing={2}>
                             <Grid item xs={6}>
                                 <Box
@@ -48,8 +49,9 @@ const HeroSection = () => {
                                         backgroundSize: 'cover',
                                     }}
                                 >
-                                    {/* Text overlay for third image */}
-                                </Box>
+                                    <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
+                                    <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
+                                    <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>                                </Box>
                             </Grid>
                             <Grid item xs={6}>
                                 <Box
@@ -62,8 +64,9 @@ const HeroSection = () => {
                                         backgroundSize: 'cover',
                                     }}
                                 >
-                                    {/* Text overlay for fourth image */}
-                                </Box>
+                                    <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
+                                    <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
+                                    <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>                                </Box>
                             </Grid>
                         </Grid>
                     </Grid>
