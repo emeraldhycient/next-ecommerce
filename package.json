@@ -18,7 +18,8 @@
     "@mui/material-nextjs": "^5.15.5",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-social-icons": "^6.9.0"
   },
   "devDependencies": {
     "@types/node": "^20",
