@@ -153,7 +153,7 @@ const Header: React.FC = () => {
                                 {/* Desktop Links */}
                                 {
                                     navbarLinks.map((item, i) =>
-                                        <Typography variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }}>
+                                        <Typography variant="h6" key={i} component="div" sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Typography
                                                 variant="h6"
                                                 noWrap
