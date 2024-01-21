@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Box, Typography, Button, Grid, Card, CardMedia, CardContent, CircularProgress } from '@mui/material';
 import ProductGrid from '@/components/card/bestSellerCard';
 import { productService } from '@/services/products/product.service';
@@ -17,7 +17,7 @@ const BestSellerSection: React.FC = () => {
     const [products, setProducts] = useState<resp | null>(null)
     const [isLoading, setisLoading] = useState(false)
 
-    const fetchProducts = async () => {
+    const fetchProducts = useCallback(async () => {
         setisLoading(true)
         try {
             const data = await productService.getProducts(currentPage)
@@ -36,12 +36,12 @@ const BestSellerSection: React.FC = () => {
             console.log(error)
             setisLoading(false)
         }
-    }
+    }, [currentPage])
 
 
     useEffect(() => {
         fetchProducts()
-    }, [currentPage])
+    }, [fetchProducts,currentPage])
 
 
     return (
@@ -96,7 +96,7 @@ const BestSellerSection: React.FC = () => {
                     {
                         products && products?.products.length > 0 ?
                             products.products.map((item) =>
-                                <ProductGrid id={item.id} title={item.title} description={item.description} thumbnail={item.thumbnail} price={item.price} images={item.images} discountPercentage={item.discountPercentage} />
+                                <ProductGrid key={item.id} id={item.id} title={item.title} description={item.description} thumbnail={item.thumbnail} price={item.price} images={item.images} discountPercentage={item.discountPercentage} />
                             )
                             :
                             ""
