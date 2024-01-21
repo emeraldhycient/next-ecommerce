@@ -2,6 +2,9 @@
 import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography, Button, Box } from '@mui/material';
 import { IPost } from '@/constants/types/types';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import CommentIcon from '@mui/icons-material/Comment';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 interface FeaturedPostSectionProps {
     posts: IPost[];
@@ -21,6 +24,7 @@ const FeaturedPostSection: React.FC<FeaturedPostSectionProps> = ({ posts }) => {
                     lineHeight: '30px',
                     letterSpacing: '0.2px'
                 }}
+                mb={"8px"}
             >
                 Practice Advice
             </Typography>
@@ -57,26 +61,103 @@ const FeaturedPostSection: React.FC<FeaturedPostSectionProps> = ({ posts }) => {
                             <CardContent>
                                 <Box display="flex" flexDirection="row" flexWrap="wrap" gap={1} mb={2}>
                                     {post.tags.map((tag, index) => (
-                                        <Typography key={index} variant="body2" color="primary">{tag}</Typography>
+                                        <Typography
+                                            key={index}
+                                            variant="body2"
+                                            sx={{
+                                                color: '#737373',
+                                                fontSize: '12px',
+                                                fontStyle: 'normal',
+                                                fontWeight: 400,
+                                                lineHeight: '16px',
+                                                letterSpacing: '0.2px',
+                                            }}
+                                        >
+                                            {tag}
+                                        </Typography>
                                     ))}
                                 </Box>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="div"
+                                    sx={{
+                                        color: '#252B42',
+                                        fontSize: '20px',
+                                        fontStyle: 'normal',
+                                        fontWeight: 400,
+                                        lineHeight: '30px',
+                                        letterSpacing: '0.2px',
+                                    }}
+                                >
                                     {post.title}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: '#737373',
+                                        fontSize: '14px',
+                                        fontStyle: 'normal',
+                                        fontWeight: 400,
+                                        lineHeight: '20px', // 142.857%
+                                        letterSpacing: '0.2px',
+                                    }}
+                                >
                                     {post.description}
                                 </Typography>
+
                                 <Box display="flex" justifyContent="space-between" alignItems="center" mt={2}>
                                     <Box display="flex" alignItems="center">
-                                        <i className="fa fa-clock-o" aria-hidden="true"></i> {/* Use appropriate icons */}
-                                        <Typography variant="body2" ml={1}>{post.date}</Typography>
+                                        <AccessTimeIcon color='primary' />
+                                        <Typography
+                                            variant="body2"
+                                            ml={1}
+                                            sx={{
+                                                color: '#737373',
+                                                fontSize: '12px',
+                                                fontStyle: 'normal',
+                                                fontWeight: 400,
+                                                lineHeight: '16px', 
+                                                letterSpacing: '0.2px',
+                                            }}
+                                        >
+                                            {post.date}
+                                        </Typography>
                                     </Box>
+
                                     <Box display="flex" alignItems="center">
-                                        <i className="fa fa-comments-o" aria-hidden="true"></i> {/* Use appropriate icons */}
-                                        <Typography variant="body2" ml={1}>{post.commentCount}</Typography>
+                                        <CommentIcon color='primary' />
+                                        <Typography
+                                            variant="body2"
+                                            ml={1}
+                                            sx={{
+                                                color: '#737373',
+                                                fontSize: '12px',
+                                                fontStyle: 'normal',
+                                                fontWeight: 400,
+                                                lineHeight: '16px', 
+                                                letterSpacing: '0.2px',
+                                            }}
+                                        >
+                                            {post.commentCount} comments
+                                        </Typography>
                                     </Box>
+
                                 </Box>
-                                <Button variant="contained" endIcon={<i className="fa fa-arrow-right" aria-hidden="true"></i>}>Learn More</Button>
+                                <Button
+                                    endIcon={<ArrowRightIcon />}
+                                    sx={{
+                                        color: '#737373',
+                                        fontSize: '14px',
+                                        fontStyle: 'normal',
+                                        fontWeight: 700,
+                                        lineHeight: '24px', // 171.429%
+                                        letterSpacing: '0.2px',
+                                    }}
+                                >
+                                    Learn More
+                                </Button>
                             </CardContent>
                         </Card>
                     </Grid>
