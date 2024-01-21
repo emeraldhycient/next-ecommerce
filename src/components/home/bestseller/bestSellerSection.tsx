@@ -47,9 +47,49 @@ const BestSellerSection: React.FC = () => {
     return (
         <section className="p-10 md:px-[148px] md:py-[80px]">
             <Box textAlign="center" my={4}>
-                <Typography variant="h5">Featured Products</Typography>
-                <Typography variant="h5">BESTSELLER PRODUCTS</Typography>
-                <Typography variant="h5">Problems trying to resolve the conflict between</Typography>
+                <Typography
+                    variant="h5"
+                    sx={{
+                        color: '#737373',
+                        textAlign: 'center',
+                        fontSize: 20,
+                        fontStyle: 'normal',
+                        fontWeight: 400,
+                        lineHeight: '30px',
+                        letterSpacing: '0.2px'
+                    }}
+                >
+                    Featured Products
+                </Typography>
+
+                <Typography
+                    variant="h5"
+                    sx={{
+                        color: '#252B42',
+                        textAlign: 'center',
+                        fontSize: 24,
+                        fontStyle: 'normal',
+                        fontWeight: 700,
+                        lineHeight: '32px',
+                        letterSpacing: '0.1px'
+                    }}
+                >
+                    BESTSELLER PRODUCTS
+                </Typography>
+                <Typography
+                    variant="h5"
+                    sx={{
+                        color: '#737373',
+                        textAlign: 'center',
+                        fontSize: 14,
+                        fontStyle: 'normal',
+                        fontWeight: 400,
+                        lineHeight: '20px',
+                        letterSpacing: '0.2px'
+                    }}
+                >
+                    Problems trying to resolve the conflict between
+                </Typography>
 
                 <Grid container spacing={2} justifyContent="center" my={2}>
 

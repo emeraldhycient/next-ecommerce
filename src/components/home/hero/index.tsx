@@ -17,9 +17,54 @@ const HeroSection = () => {
                                 backgroundSize: 'cover',
                             }}
                         >
-                            <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
-                            <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
-                            <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    position: 'absolute',
+                                    top: 16,
+                                    left: 16,
+                                    color: '#2DC071',
+                                    fontSize: 14,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '24px',
+                                    letterSpacing: '0.2px',
+                                }}
+                            >
+                                5 Items
+                            </Typography>
+                            <Typography
+                                variant="h4"
+                                sx={{
+                                    position: 'absolute',
+                                    top: 36,
+                                    left: 16,
+                                    color: ' #252B42',
+                                    fontSize: 40,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '50px',
+                                    letterSpacing: '0.2px',
+                                }}
+                            >
+                                FURNITURE
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    position: 'absolute',
+                                    top: 80,
+                                    left: 16,
+                                    color: '#252B42',
+                                    fontSize: 14,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '24px',
+                                    letterSpacing: '0.2px',
+                                }}
+                            >
+                                Read More
+                            </Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
@@ -34,9 +79,55 @@ const HeroSection = () => {
                                 marginBottom: 2
                             }}
                         >
-                            <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
-                            <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
-                            <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>                        </Box>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    position: 'absolute',
+                                    top: 16,
+                                    left: 16,
+                                    color: '#2DC071',
+                                    fontSize: 14,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '24px',
+                                    letterSpacing: '0.2px',
+                                }}
+                            >
+                                5 Items
+                            </Typography>
+                            <Typography
+                                variant="h4"
+                                sx={{
+                                    position: 'absolute',
+                                    top: 36,
+                                    left: 16,
+                                    color: ' #252B42',
+                                    fontSize: 40,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '50px',
+                                    letterSpacing: '0.2px',
+                                }}
+                            >
+                                FURNITURE
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    position: 'absolute',
+                                    top: 80,
+                                    left: 16,
+                                    color: '#252B42',
+                                    fontSize: 14,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '24px',
+                                    letterSpacing: '0.2px',
+                                }}
+                            >
+                                Read More
+                            </Typography>
+                        </Box>
                         <Grid container spacing={2}>
                             <Grid item xs={6}>
                                 <Box
@@ -49,9 +140,55 @@ const HeroSection = () => {
                                         backgroundSize: 'cover',
                                     }}
                                 >
-                                    <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
-                                    <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
-                                    <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>                                </Box>
+                                    <Typography
+                                        variant="h6"
+                                        sx={{
+                                            position: 'absolute',
+                                            top: 16,
+                                            left: 16,
+                                            color: '#2DC071',
+                                            fontSize: 14,
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            lineHeight: '24px',
+                                            letterSpacing: '0.2px',
+                                        }}
+                                    >
+                                        5 Items
+                                    </Typography>
+                                    <Typography
+                                        variant="h4"
+                                        sx={{
+                                            position: 'absolute',
+                                            top: 36,
+                                            left: 16,
+                                            color: ' #252B42',
+                                            fontSize: 40,
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            lineHeight: '50px',
+                                            letterSpacing: '0.2px',
+                                        }}
+                                    >
+                                        FURNITURE
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        sx={{
+                                            position: 'absolute',
+                                            top: 80,
+                                            left: 16,
+                                            color: '#252B42',
+                                            fontSize: 14,
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            lineHeight: '24px',
+                                            letterSpacing: '0.2px',
+                                        }}
+                                    >
+                                        Read More
+                                    </Typography>
+                                </Box>
                             </Grid>
                             <Grid item xs={6}>
                                 <Box
@@ -64,9 +201,55 @@ const HeroSection = () => {
                                         backgroundSize: 'cover',
                                     }}
                                 >
-                                    <Typography variant="h6" sx={{ position: 'absolute', top: 16, left: 16, color: 'white' }}>Text 1</Typography>
-                                    <Typography variant="h4" sx={{ position: 'absolute', top: 36, left: 16, color: 'white' }}>Main Text</Typography>
-                                    <Typography variant="body1" sx={{ position: 'absolute', top: 80, left: 16, color: 'white' }}>Description</Typography>                                </Box>
+                                    <Typography
+                                        variant="h6"
+                                        sx={{
+                                            position: 'absolute',
+                                            top: 16,
+                                            left: 16,
+                                            color: '#2DC071',
+                                            fontSize: 14,
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            lineHeight: '24px',
+                                            letterSpacing: '0.2px',
+                                        }}
+                                    >
+                                        5 Items
+                                    </Typography>
+                                    <Typography
+                                        variant="h4"
+                                        sx={{
+                                            position: 'absolute',
+                                            top: 36,
+                                            left: 16,
+                                            color: ' #252B42',
+                                            fontSize: 40,
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            lineHeight: '50px',
+                                            letterSpacing: '0.2px',
+                                        }}
+                                    >
+                                        FURNITURE
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        sx={{
+                                            position: 'absolute',
+                                            top: 80,
+                                            left: 16,
+                                            color: ' #252B42',
+                                            fontSize: 14,
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            lineHeight: '24px',
+                                            letterSpacing: '0.2px',
+                                        }}
+                                    >
+                                        Read More
+                                    </Typography>
+                                </Box>
                             </Grid>
                         </Grid>
                     </Grid>
