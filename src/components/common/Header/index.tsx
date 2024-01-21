@@ -15,11 +15,9 @@ import { useTheme } from '@mui/material/styles';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Image from 'next/image';
-import navbarLinks from '@/constants';
+import {navbarLinks} from '@/constants';
 import { Box, Grid } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+
 
 const Header: React.FC = () => {
     const theme = useTheme();

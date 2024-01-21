@@ -1,4 +1,4 @@
-const navbarLinks = [
+export const navbarLinks = [
     {
         id: 0,
         title: "Home",
@@ -32,4 +32,5 @@ const navbarLinks = [
     },
 ]
 
-export default navbarLinks
+
+export const globalBaseUrl = "https://dummyjson.com/"
