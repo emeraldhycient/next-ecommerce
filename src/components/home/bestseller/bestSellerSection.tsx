@@ -45,7 +45,7 @@ const BestSellerSection: React.FC = () => {
 
 
     return (
-        <section className="p-10 md:px-[148px] md:py-[80px]">
+        <section className="p-10 md:px-[148px] md:pb-[40px]">
             <Box textAlign="center" my={4}>
                 <Typography
                     variant="h5"
