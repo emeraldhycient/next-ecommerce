@@ -4,6 +4,11 @@ class ProductService {
     async getProducts(pageNumber: number) {
         return await axiosClient.get(`/products?limit=10&skip=${pageNumber}`)
     }
+
+    async getProduct(id: number) {
+        return await axiosClient.get(`/products/${id}`)
+    }
+
 }
 
 

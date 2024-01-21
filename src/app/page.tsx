@@ -4,6 +4,7 @@ import BestSellerSection from '@/components/home/bestseller/bestSellerSection'
 import HeroSection from '@/components/home/hero'
 import FeaturedPostSection from '@/components/home/blog/featuredPostSection'
 import { samplePosts } from '@/constants'
+import TestimonialSection from '@/components/home/testimony'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <BestSellerSection />
       <AboutSection />
       <FeaturedPostSection posts={samplePosts} />
+      <TestimonialSection/>
     </main>
   )
 }
