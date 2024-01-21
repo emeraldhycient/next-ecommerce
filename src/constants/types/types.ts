@@ -7,3 +7,14 @@ export interface Product {
     discountPercentage?: number;
     images: string[]
 }
+
+
+export interface IPost {
+    id: number;
+    imageUrl: string;
+    tags: string[];
+    title: string;
+    description: string;
+    date: string;
+    commentCount: number;
+}

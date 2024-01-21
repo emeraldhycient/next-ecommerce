@@ -2,7 +2,8 @@ import Header from '@/components/common/Header'
 import AboutSection from '@/components/home/about'
 import BestSellerSection from '@/components/home/bestseller/bestSellerSection'
 import HeroSection from '@/components/home/hero'
-import Image from 'next/image'
+import FeaturedPostSection from '@/components/home/blog/featuredPostSection'
+import { samplePosts } from '@/constants'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <BestSellerSection />
       <AboutSection />
+      <FeaturedPostSection posts={samplePosts} />
     </main>
   )
 }
