@@ -15,7 +15,7 @@ function Page() {
     const fetchProduct = useCallback(async () => {
         setisLoading(true)
         try {
-            const data = await productService.getProduct(4)
+            const data = await productService.getProduct(id)
             console.log(data)
 
             setProduct(data?.data)
