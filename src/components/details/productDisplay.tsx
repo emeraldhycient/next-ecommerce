@@ -33,7 +33,7 @@ const ProductDisplay = ({ product }: { product: Product }) => {
                         },
                     }}
                 >
-                    {product?.images.map((image, index) => (
+                    {product?.images?.map((image, index) => (
                         <CardMedia
                             key={index}
                             component="img"

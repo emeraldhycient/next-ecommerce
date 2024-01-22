@@ -43,7 +43,7 @@ function Page() {
                     <Typography variant="h6">Loading Products</Typography>
                 </div> :
                     <section className="p-10 md:px-[148px] md:pb-[40px]">
-                        <ProductDisplay product={product} />
+                        {/* <ProductDisplay product={product} /> */}
                     </section>
             }
 
