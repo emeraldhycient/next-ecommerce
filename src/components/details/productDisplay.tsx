@@ -7,6 +7,8 @@ import { Product } from '@/constants/types/types';
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { addToCart, addToSavedItems } from '@/store/slices/cartSlice';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const ProductDisplay = ({ product }: { product: Product }) => {
     const dispatch = useDispatch();
@@ -14,12 +16,13 @@ const ProductDisplay = ({ product }: { product: Product }) => {
     //TODO: clean up the alert to react toast
     const handleAddToCart = () => {
         dispatch(addToCart(JSON.stringify(product)));
-        alert('Item added to cart!');
+        toast.success('Item added to cart!');
+
     };
 
     const handleAddToSavedItems = () => {
         dispatch(addToSavedItems(JSON.stringify(product)));
-        alert('Item added to saved items!');
+        toast.success('Item added to saved items!');
     };
 
 
