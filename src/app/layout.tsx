@@ -26,11 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppLayout>
-          <Header />
-          {children}
-          <Footer />
-        </AppLayout>
+          <AppLayout>
+            <Header />
+            {children}
+            <Footer />
+          </AppLayout>
       </body>
     </html>
   )
