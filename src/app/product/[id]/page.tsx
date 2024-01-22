@@ -7,7 +7,7 @@ import { Product } from '@/constants/types/types'
 import ProductDisplay from '@/components/details/productDisplay'
 import { CircularProgress, Typography } from '@mui/material'
 
-function page() {
+function Page() {
     const params = useParams()
     const [product, setProduct] = useState<Product | null>(null)
     const [isLoading, setisLoading] = useState(false)
@@ -26,12 +26,12 @@ function page() {
             console.log(error)
             setisLoading(false)
         }
-    }, [])
+    }, [params?.id])
 
 
     useEffect(() => {
         fetchProduct()
-    }, [fetchProduct])
+    }, [fetchProduct, params?.id])
 
 
     return (
@@ -52,4 +52,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
