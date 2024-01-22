@@ -8,14 +8,14 @@ import ProductDisplay from '@/components/details/productDisplay'
 import { CircularProgress, Typography } from '@mui/material'
 
 function Page() {
-    const params = useParams()
-    const [product, setProduct] = useState<Product | null>(null)
+    const { id }: any = useParams()
+    const [product, setProduct] = useState<Product | any>(null)
     const [isLoading, setisLoading] = useState(false)
 
     const fetchProduct = useCallback(async () => {
         setisLoading(true)
         try {
-            const data = await productService.getProduct(params?.id)
+            const data = await productService.getProduct(id)
             console.log(data)
 
             setProduct(data?.data)
@@ -26,12 +26,12 @@ function Page() {
             console.log(error)
             setisLoading(false)
         }
-    }, [params?.id])
+    }, [id])
 
 
     useEffect(() => {
         fetchProduct()
-    }, [fetchProduct, params?.id])
+    }, [fetchProduct, id])
 
 
     return (
