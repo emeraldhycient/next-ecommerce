@@ -1,4 +1,4 @@
-import Header from '@/components/common/Header'
+'use client'
 import AboutSection from '@/components/home/about'
 import BestSellerSection from '@/components/home/bestseller/bestSellerSection'
 import HeroSection from '@/components/home/hero'
@@ -14,7 +14,6 @@ export default function Home() {
       <AboutSection />
       <FeaturedPostSection posts={samplePosts} />
       <TestimonialSection />
-      
     </main>
   )
 }

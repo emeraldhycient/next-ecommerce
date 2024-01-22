@@ -8,7 +8,7 @@ import ProductDisplay from '@/components/details/productDisplay'
 import { CircularProgress, Typography } from '@mui/material'
 
 function Page() {
-    // const { id }: any = useParams()
+    const { id }: any = useParams()
     const [product, setProduct] = useState<Product | any>(null)
     const [isLoading, setisLoading] = useState(false)
 
@@ -26,12 +26,12 @@ function Page() {
             console.log(error)
             setisLoading(false)
         }
-    }, [])
+    }, [id])
 
 
     useEffect(() => {
         fetchProduct()
-    }, [fetchProduct])
+    }, [fetchProduct, id])
 
 
     return (
@@ -43,7 +43,7 @@ function Page() {
                     <Typography variant="h6">Loading Products</Typography>
                 </div> :
                     <section className="p-10 md:px-[148px] md:pb-[40px]">
-                        {/* <ProductDisplay product={product} /> */}
+                        <ProductDisplay product={product} />
                     </section>
             }
 

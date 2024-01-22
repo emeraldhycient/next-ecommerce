@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react';
 import { Box, Grid, Typography, Divider, Button, IconButton, CardMedia, Rating } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
