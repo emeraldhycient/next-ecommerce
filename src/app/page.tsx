@@ -9,12 +9,12 @@ import TestimonialSection from '@/components/home/testimony'
 export default function Home() {
   return (
     <main className="">
-      <Header />
       <HeroSection />
       <BestSellerSection />
       <AboutSection />
       <FeaturedPostSection posts={samplePosts} />
-      <TestimonialSection/>
+      <TestimonialSection />
+      
     </main>
   )
 }

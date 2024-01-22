@@ -6,6 +6,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import AppLayout from './appLayout';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/footer';
 
 
 
@@ -25,7 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppLayout>
+          <Header />
           {children}
+          <Footer />
         </AppLayout>
       </body>
     </html>

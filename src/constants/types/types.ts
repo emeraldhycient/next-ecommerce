@@ -4,6 +4,8 @@ export interface Product {
     description: string;
     thumbnail: string;
     price: number;
+    rating?: number;
+    stock?: number;
     discountPercentage?: number;
     images: string[]
 }

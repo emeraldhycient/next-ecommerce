@@ -5,7 +5,7 @@ import ProductGrid from '@/components/card/bestSellerCard';
 import { productService } from '@/services/products/product.service';
 import { Product } from '@/constants/types/types';
 
-const BestSellerSection: React.FC = () => {
+const BestSellerSection: React.FC<{ isDetails?: boolean }> = ({ isDetails = false }) => {
 
     interface resp {
         limit: number,
@@ -21,7 +21,7 @@ const BestSellerSection: React.FC = () => {
         setisLoading(true)
         try {
             const data = await productService.getProducts(currentPage)
-            console.log(data)
+            // console.log(data)
 
             setProducts(prevState => ({
                 limit: data?.data?.limit,
@@ -41,56 +41,75 @@ const BestSellerSection: React.FC = () => {
 
     useEffect(() => {
         fetchProducts()
-    }, [fetchProducts,currentPage])
+    }, [fetchProducts, currentPage])
 
 
     return (
         <section className="p-10 md:px-[148px] md:pb-[40px]">
-            <Box textAlign="center" my={4}>
-                <Typography
-                    variant="h5"
-                    sx={{
-                        color: '#737373',
-                        textAlign: 'center',
-                        fontSize: 20,
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: '30px',
-                        letterSpacing: '0.2px'
-                    }}
-                >
-                    Featured Products
-                </Typography>
+            <Box textAlign="center" bgcolor={isDetails ? "#FAFAFA" : "white"} my={4}>
+                {
+                    isDetails ?
+                        <Typography
+                            variant="h5"
+                            sx={{
+                                color: '#252B42',
+                                textAlign: 'left',
+                                fontSize: 24,
+                                fontStyle: 'normal',
+                                fontWeight: 700,
+                                lineHeight: '32px',
+                                letterSpacing: '0.1px'
+                            }}
+                        >
+                            BESTSELLER PRODUCTS
+                        </Typography>
+                        :
+                        <>
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    color: '#737373',
+                                    textAlign: 'center',
+                                    fontSize: 20,
+                                    fontStyle: 'normal',
+                                    fontWeight: 400,
+                                    lineHeight: '30px',
+                                    letterSpacing: '0.2px'
+                                }}
+                            >
+                                Featured Products
+                            </Typography>
 
-                <Typography
-                    variant="h5"
-                    sx={{
-                        color: '#252B42',
-                        textAlign: 'center',
-                        fontSize: 24,
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        lineHeight: '32px',
-                        letterSpacing: '0.1px'
-                    }}
-                >
-                    BESTSELLER PRODUCTS
-                </Typography>
-                <Typography
-                    variant="h5"
-                    sx={{
-                        color: '#737373',
-                        textAlign: 'center',
-                        fontSize: 14,
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: '20px',
-                        letterSpacing: '0.2px'
-                    }}
-                >
-                    Problems trying to resolve the conflict between
-                </Typography>
-
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    color: '#252B42',
+                                    textAlign: 'center',
+                                    fontSize: 24,
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    lineHeight: '32px',
+                                    letterSpacing: '0.1px'
+                                }}
+                            >
+                                BESTSELLER PRODUCTS
+                            </Typography>
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    color: '#737373',
+                                    textAlign: 'center',
+                                    fontSize: 14,
+                                    fontStyle: 'normal',
+                                    fontWeight: 400,
+                                    lineHeight: '20px',
+                                    letterSpacing: '0.2px'
+                                }}
+                            >
+                                Problems trying to resolve the conflict between
+                            </Typography>
+                        </>
+                }
                 <Grid container spacing={2} justifyContent="center" my={2}>
 
                     {
@@ -109,7 +128,7 @@ const BestSellerSection: React.FC = () => {
                     </div>
                 }
                 {
-                    products ? currentPage < products?.total ?
+                    !isDetails && products ? currentPage < products?.total ?
                         <Button variant="outlined" onClick={() => setcurrentPage(currentPage + 10)} color="primary" sx={{ mt: 3 }}>
                             Load More
                         </Button>
